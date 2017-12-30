@@ -1,7 +1,46 @@
+html{
+    height: 100%;
+}
 body {
     font-family: helvetica, arial, sans-serif;
+    margin: 0;
+    height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Times New Roman", Georgia, Serif;
+}
+
+/* grid */
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 20% auto 10%;
+    grid-template-columns: auto 30%;
+    grid-template-areas: 
+        "header header"
+        "main  nav"
+        "footer footer"
+    ;
+}
+
+header{
+    background-color: coral;
+    grid-area: header;
+}
+
+.main{
+    background-color: aqua;
+    grid-area: main;
+}
+
+.sidenav{
+    background-color: bisque;
+    grid-area: nav;
+}
+footer{
+    background-color: cadetblue;
+    grid-area: footer;
 }
